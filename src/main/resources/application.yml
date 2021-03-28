@@ -1,0 +1,7 @@
+server:
+  port: 9002
+spring:
+  servlet:
+    multipart:
+      file-size-threshold: 0 # default to 0
+#      resolve-lazily: true

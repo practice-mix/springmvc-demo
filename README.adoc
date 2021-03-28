@@ -1,0 +1,4 @@
+== test case
+[source]
+$ curl 'localhost:9002/form' -H "Content-Type: multipart/form-data" -X POST -F "name=john" -F "file=@/c/Users/luobd/Documents/test/material.txt"
+
