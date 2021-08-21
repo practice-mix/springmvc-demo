@@ -22,6 +22,22 @@
         </dependency>
     </dependencies>
     <build>
+        <!--        for Thundra Sidekick Thundra Sidekick-->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+            </resource>
+            <resource>
+                <directory>src/main/kotlin</directory>
+            </resource>
+            <resource>
+                <directory>src/main/scala</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+        <!--        end -->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

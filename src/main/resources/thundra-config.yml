@@ -1,0 +1,7 @@
+thundra:
+  apiKey: 40c73093-23cb-4653-b664-132243e49b38  #mandatory
+  agent:
+    application:
+      name: mvc-demo  #mandatory
+      stage: dev  #optional
+      version: 1.0.0  #optional
