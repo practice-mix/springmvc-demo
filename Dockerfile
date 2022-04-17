@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:8-jdk-alpine
 RUN mkdir -p /app
 
 # Copy app artifact
