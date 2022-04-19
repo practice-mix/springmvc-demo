@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-web
+spec:
+  selector:
+    matchLabels:
+      app: demo-web
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: demo-web
+    spec:
+      containers:
+        - name: demo-web
+          image: localhost.org/demo/web:3.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: regcred
+
