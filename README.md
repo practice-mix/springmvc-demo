@@ -5,7 +5,9 @@ $ curl 'localhost:9002/form' -H "Content-Type: multipart/form-data" -X POST -F "
 ```
 
 ## Thundra Sidekick
-
+```shell
+java -javaagent:"D:\PortableSoft\thundra-agent-bootstrap-2.7.22.jar"
+```
 https://sidekick.docs.thundra.io/installation/java
 
 ## create Secret

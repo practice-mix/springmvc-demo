@@ -7,6 +7,8 @@ spec:
     matchLabels:
       app: demo-web
   replicas: 2
+  strategy:
+    type: RollingUpdate
   template:
     metadata:
       labels:
@@ -18,6 +20,19 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              port: 8080
+              path: /actuator/health
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /actuator/health
+          startupProbe:
+            httpGet:
+              port: 8080
+              path: /actuator/health
+            initialDelaySeconds: 5
       imagePullSecrets: # login image registry
         - name: regcred
 
