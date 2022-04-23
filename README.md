@@ -8,6 +8,7 @@ $ curl 'localhost:9002/form' -H "Content-Type: multipart/form-data" -X POST -F "
 ```shell
 java -javaagent:"D:\PortableSoft\thundra-agent-bootstrap-2.7.22.jar"
 ```
+
 https://sidekick.docs.thundra.io/installation/java
 
 ## create Secret
@@ -16,6 +17,11 @@ https://sidekick.docs.thundra.io/installation/java
 kubectl create secret docker-registry regcred --docker-server=localhost.org --docker-username=admin --docker-password=admin --docker-email=admin@admin
 
 ```
+
+## k8s java app manifest yaml:
+
+https://www.section.io/engineering-education/spring-boot-kubernetes/
+https://spring.io/guides/gs/spring-boot-kubernetes/
 
 # issues
 
