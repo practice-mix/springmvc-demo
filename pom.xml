@@ -10,8 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mvc-demo</artifactId>
+    <version>3.0</version>
     <properties>
         <java.version>1.8</java.version>
+        <docker.image.prefix>localhost.org</docker.image.prefix>
+        <docker.registry.url>localhost.org</docker.registry.url>
+        <helm.chart.version>${project.version}</helm.chart.version>
+        <helm.repo.url>http://localhost:8081/repository/helm-hosted</helm.repo.url>
     </properties>
 
 
