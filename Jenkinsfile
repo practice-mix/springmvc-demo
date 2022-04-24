@@ -9,7 +9,13 @@ pipeline {
         git url:'https://github.com/practice-mix/springmvc-demo.git', branch:'main'
       }
     }
-    
+    node {
+      stage ('Build') {
+        withMaven( ) {
+          sh "mvn clean build"
+        } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
+      }
+    }
       stage("Build image") {
             steps {
                 script {
