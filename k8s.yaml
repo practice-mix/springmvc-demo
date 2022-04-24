@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: demo-web
-          image: localhost.org/demo/web:3.0
+          image: localhost.org/demo/web:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
