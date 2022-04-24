@@ -2,14 +2,14 @@ FROM openjdk:8-jre-alpine
 RUN mkdir -p /app
 
 # Copy app artifact
-ADD target/mvc-demo-2.1.2.RELEASE.jar /app/mvc-demo-2.1.2.RELEASE.jar
+COPY ./target/*.jar /app/app.jar
 
 # Copy Thundra bootstrap agent artifact.
 # Please rename with the file you have downloaded at the first step.
-#ADD "D:\PortableSoft\thundra-agent-bootstrap-2.7.22.jar" /app/thundra-agent-bootstrap.jar
+#COPY "D:\PortableSoft\thundra-agent-bootstrap-2.7.22.jar" /app/
 
 WORKDIR /app
 EXPOSE 8080
 #ENTRYPOINT [ "java", "-javaagent:thundra-agent-bootstrap.jar", "-jar", "mvc-demo-2.1.2.RELEASE.jar" ]
-ENTRYPOINT [ "java",  "-jar", "mvc-demo-2.1.2.RELEASE.jar" ]
+ENTRYPOINT [ "java",  "-jar", "app.jar" ]
 
