@@ -6,7 +6,7 @@ metadata:
 #    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: demoweb.argocd.org
+    - host: demo-web.argocd.org
       http:
         paths:
           - path: /
